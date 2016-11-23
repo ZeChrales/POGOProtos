@@ -1,21 +1,18 @@
 syntax = "proto3";
 package Holoholo.Rpc;
 
-enum PokemonCreateContext
-{
+enum PokemonCreateContext {
 	CREATE_CONTEXT_WILD = 0;
 	CREATE_CONTEXT_EGG = 1;
 	CREATE_CONTEXT_EVOLVE = 2;
 }
 
-enum FortType
-{
+enum FortType {
 	GYM = 0;
 	CHECKPOINT = 1;
 }
 
-enum Item
-{
+enum Item {
 	ITEM_UNKNOWN = 0;
 	ITEM_POKE_BALL = 1;
 	ITEM_GREAT_BALL = 2;
@@ -48,43 +45,37 @@ enum Item
 	ITEM_ITEM_STORAGE_UPGRADE = 1002;
 }
 
-enum PlayerAvatarType
-{
+enum PlayerAvatarType {
 	PLAYER_AVATAR_UNSET = 0;
 	PLAYER_AVATAR_MALE = 1;
 	PLAYER_AVATAR_FEMALE = 2;
 }
 
-enum InventoryUpgradeType
-{
+enum InventoryUpgradeType {
 	UPGRADE_UNSET = 0;
 	INCREASE_ITEM_STORAGE = 1;
 	INCREASE_POKEMON_STORAGE = 2;
 }
 
-enum QuestType
-{
+enum QuestType {
 	QUEST_UNKNOWN_TYPE = 0;
 	QUEST_FIRST_CATCH_OF_THE_DAY = 1;
 	QUEST_FIRST_POKESTOP_OF_THE_DAY = 2;
 }
 
-enum EggIncubatorType
-{
+enum EggIncubatorType {
 	INCUBATOR_UNSET = 0;
 	INCUBATOR_DISTANCE = 1;
 }
 
-enum Team
-{
+enum Team {
 	UNSET = 0;
 	TEAM_BLUE = 1;
 	TEAM_RED = 2;
 	TEAM_YELLOW = 3;
 }
 
-enum HoloPokemonType
-{
+enum HoloPokemonType {
 	POKEMON_TYPE_NONE = 0;
 	POKEMON_TYPE_NORMAL = 1;
 	POKEMON_TYPE_FIGHTING = 2;
@@ -106,15 +97,13 @@ enum HoloPokemonType
 	POKEMON_TYPE_FAIRY = 18;
 }
 
-enum HoloPokemonClass
-{
+enum HoloPokemonClass {
 	POKEMON_CLASS_NORMAL = 0;
 	POKEMON_CLASS_LEGENDARY = 1;
 	POKEMON_CLASS_MYTHIC = 2;
 }
 
-enum HoloPokemonNature
-{
+enum HoloPokemonNature {
 	NATURE_UNKNOWN = 0;
 	V0001_POKEMON_NATURE_STOIC = 1;
 	V0002_POKEMON_NATURE_ASSASSIN = 2;
@@ -125,8 +114,7 @@ enum HoloPokemonNature
 	V0007_POKEMON_NATURE_CHAMPION = 7;
 }
 
-enum HoloPokemonMovementType
-{
+enum HoloPokemonMovementType {
 	POKEMON_ENC_MOVEMENT_STATIC = 0;
 	POKEMON_ENC_MOVEMENT_JUMP = 1;
 	POKEMON_ENC_MOVEMENT_VERTICAL = 2;
@@ -136,8 +124,7 @@ enum HoloPokemonMovementType
 	POKEMON_ENC_MOVEMENT_HOVERING = 6;
 }
 
-enum HoloItemType
-{
+enum HoloItemType {
 	ITEM_TYPE_NONE = 0;
 	ITEM_TYPE_POKEBALL = 1;
 	ITEM_TYPE_POTION = 2;
@@ -153,8 +140,7 @@ enum HoloItemType
 	ITEM_TYPE_INVENTORY_UPGRADE = 12;
 }
 
-enum HoloItemCategory
-{
+enum HoloItemCategory {
 	ITEM_CATEGORY_NONE = 0;
 	ITEM_CATEGORY_POKEBALL = 1;
 	ITEM_CATEGORY_FOOD = 2;
@@ -169,8 +155,7 @@ enum HoloItemCategory
 	ITEM_CATEGORY_INVENTORY_UPGRADE = 11;
 }
 
-enum HoloIapItemCategory
-{
+enum HoloIapItemCategory {
 	IAP_CATEGORY_NONE = 0;
 	IAP_CATEGORY_BUNDLE = 1;
 	IAP_CATEGORY_ITEMS = 2;
@@ -178,8 +163,7 @@ enum HoloIapItemCategory
 	IAP_CATEGORY_POKECOINS = 4;
 }
 
-enum HoloItemEffect
-{
+enum HoloItemEffect {
 	ITEM_EFFECT_NONE = 0;
 	ITEM_EFFECT_CAP_NO_FLEE = 1000;
 	ITEM_EFFECT_CAP_NO_MOVEMENT = 1002;
@@ -197,8 +181,7 @@ enum HoloItemEffect
 	ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW = 1014;
 }
 
-enum HoloActivityType
-{
+enum HoloActivityType {
 	ACTIVITY_UNKNOWN = 0;
 	ACTIVITY_CATCH_POKEMON = 1;
 	ACTIVITY_CATCH_LEGEND_POKEMON = 2;
@@ -228,8 +211,7 @@ enum HoloActivityType
 	ACTIVITY_SEARCH_FORT_STREAK_BONUS = 26;
 }
 
-enum HoloBadgeType
-{
+enum HoloBadgeType {
 	BADGE_UNSET = 0;
 	BADGE_TRAVEL_KM = 1;
 	BADGE_POKEDEX_ENTRIES = 2;
@@ -270,8 +252,7 @@ enum HoloBadgeType
 	BADGE_PIKACHU = 37;
 }
 
-enum CameraInterpolation
-{
+enum CameraInterpolation {
 	CAM_INTERP_CUT = 0;
 	CAM_INTERP_LINEAR = 1;
 	CAM_INTERP_SMOOTH = 2;
@@ -279,8 +260,7 @@ enum CameraInterpolation
 	CAM_INTERP_DEPENDS = 4;
 }
 
-enum CameraTarget
-{
+enum CameraTarget {
 	CAM_TARGET_ATTACKER = 0;
 	CAM_TARGET_ATTACKER_EDGE = 1;
 	CAM_TARGET_ATTACKER_GROUND = 2;
@@ -297,8 +277,7 @@ enum CameraTarget
 	CAM_TARGET_ATTACKER_DEFENDER_WORLD = 14;
 }
 
-enum HoloPokemonMove
-{
+enum HoloPokemonMove {
 	MOVE_UNSET = 0;
 	V0001_MOVE_THUNDER_SHOCK = 1;
 	V0002_MOVE_QUICK_ATTACK = 2;
@@ -482,8 +461,7 @@ enum HoloPokemonMove
 	V0242_MOVE_TRANSFORM_FAST = 242;
 }
 
-enum HoloPokemonId
-{
+enum HoloPokemonId {
 	POKEMON_UNSET = 0;
 	V0001_POKEMON_BULBASAUR = 1;
 	V0002_POKEMON_IVYSAUR = 2;
@@ -738,8 +716,7 @@ enum HoloPokemonId
 	V0251_POKEMON_CELEBI = 251;
 }
 
-enum HoloPokemonFamilyId
-{
+enum HoloPokemonFamilyId {
 	FAMILY_UNSET = 0;
 	V0001_FAMILY_BULBASAUR = 1;
 	V0004_FAMILY_CHARMANDER = 4;
@@ -874,15 +851,13 @@ enum HoloPokemonFamilyId
 	V0251_FAMILY_CELEBI = 251;
 }
 
-enum EncounterType
-{
+enum EncounterType {
 	SPAWN_POINT = 0;
 	INCENSE = 1;
 	DISK = 2;
 }
 
-enum Method
-{
+enum Method {
 	METHOD_UNSET = 0;
 	PLAYER_UPDATE = 1;
 	GET_PLAYER = 2;
@@ -961,8 +936,7 @@ enum Method
 	SFIDA_CAPTURE = 806;
 }
 
-enum Platform
-{
+enum Platform {
 	PLATFORM_UNSET = 0;
 	PLATFORM_IOS = 1;
 	PLATFORM_ANDROID = 2;
@@ -970,8 +944,7 @@ enum Platform
 	PLATFORM_WINDOWS = 4;
 }
 
-enum TutorialCompletion
-{
+enum TutorialCompletion {
 	LEGAL_SCREEN = 0;
 	AVATAR_SELECTION = 1;
 	ACCOUNT_CREATION = 2;
@@ -984,34 +957,29 @@ enum TutorialCompletion
 	GYM_TUTORIAL = 9;
 }
 
-message BackgroundToken
-{
+message BackgroundToken {
 	bytes token = 1;
 	int64 expiration_time = 2;
 	bytes iv = 3;
 }
 
-message RegisterBackgroundDeviceActionProto
-{
+message RegisterBackgroundDeviceActionProto {
 	string device_type = 1;
 	string device_id = 2;
 }
 
-message RegisterBackgroundDeviceResponseProto
-{
+message RegisterBackgroundDeviceResponseProto {
 	Status status = 1;
 	BackgroundToken token = 2;
 
-	enum Status
-	{
+	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR = 2;
 	}
 }
 
-message AssetDigestRequestProto
-{
+message AssetDigestRequestProto {
 	Platform platform = 1;
 	string device_manufacturer = 2;
 	string device_model = 3;
@@ -1019,8 +987,7 @@ message AssetDigestRequestProto
 	uint32 app_version = 5;
 }
 
-message AssetDigestEntryProto
-{
+message AssetDigestEntryProto {
 	string asset_id = 1;
 	string bundle_name = 2;
 	int64 version = 3;
@@ -1029,40 +996,33 @@ message AssetDigestEntryProto
 	bytes key = 6;
 }
 
-message AssetDigestOutProto
-{
+message AssetDigestOutProto {
 	repeated AssetDigestEntryProto digest = 1;
 	uint64 timestamp = 2;
 }
 
-message DownloadUrlRequestProto
-{
+message DownloadUrlRequestProto {
 	repeated string asset_id = 1;
 }
 
-message DownloadUrlEntryProto
-{
+message DownloadUrlEntryProto {
 	string asset_id = 1;
 	string url = 2;
 	int32 size = 3;
 	fixed32 checksum = 4;
 }
 
-message DownloadUrlOutProto
-{
+message DownloadUrlOutProto {
 	repeated DownloadUrlEntryProto download_urls = 1;
 }
 
-message CollectDailyBonusProto
-{
+message CollectDailyBonusProto {
 }
 
-message CollectDailyBonusOutProto
-{
+message CollectDailyBonusOutProto {
 	Result result = 1;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		FAILURE = 2;
@@ -1070,19 +1030,16 @@ message CollectDailyBonusOutProto
 	}
 }
 
-message CollectDailyDefenderBonusProto
-{
+message CollectDailyDefenderBonusProto {
 }
 
-message CollectDailyDefenderBonusOutProto
-{
+message CollectDailyDefenderBonusOutProto {
 	Result result = 1;
 	repeated string currency_type = 2;
 	repeated int32 currency_awarded = 3;
 	int32 num_defenders = 4;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		FAILURE = 2;
@@ -1091,21 +1048,17 @@ message CollectDailyDefenderBonusOutProto
 	}
 }
 
-message EchoProto
-{
+message EchoProto {
 }
 
-message EchoOutProto
-{
+message EchoOutProto {
 	string context = 1;
 }
 
-message GetHatchedEggsProto
-{
+message GetHatchedEggsProto {
 }
 
-message GetHatchedEggsOutProto
-{
+message GetHatchedEggsOutProto {
 	bool success = 1;
 	repeated fixed64 pokemon_id = 2;
 	repeated int32 exp_awarded = 3;
@@ -1114,29 +1067,25 @@ message GetHatchedEggsOutProto
 	repeated float egg_km_walked = 6;
 }
 
-message EncounterProto
-{
+message EncounterProto {
 	fixed64 encounter_id = 1;
 	string spawnpoint_id = 2;
 	double player_lat_degrees = 3;
 	double player_lng_degrees = 4;
 }
 
-message EncounterOutProto
-{
+message EncounterOutProto {
 	WildPokemonProto pokemon = 1;
 	Background background = 2;
 	Status status = 3;
 	CaptureProbabilityProto capture_probability = 4;
 
-	enum Background
-	{
+	enum Background {
 		PARK = 0;
 		DESERT = 1;
 	}
 
-	enum Status
-	{
+	enum Status {
 		ENCOUNTER_ERROR = 0;
 		ENCOUNTER_SUCCESS = 1;
 		ENCOUNTER_NOT_FOUND = 2;
@@ -1148,8 +1097,7 @@ message EncounterOutProto
 	}
 }
 
-message CatchPokemonProto
-{
+message CatchPokemonProto {
 	fixed64 encounter_id = 1;
 	int32 pokeball = 2;
 	double normalized_reticle_size = 3;
@@ -1159,16 +1107,14 @@ message CatchPokemonProto
 	double normalized_hit_position = 7;
 }
 
-message CatchPokemonOutProto
-{
+message CatchPokemonOutProto {
 	Status status = 1;
 	double miss_percent = 2;
 	fixed64 captured_pokemon_id = 3;
 	CaptureScoreProto scores = 4;
 	CaptureReason capture_reason = 5;
 
-	enum Status
-	{
+	enum Status {
 		CATCH_ERROR = 0;
 		CATCH_SUCCESS = 1;
 		CATCH_ESCAPE = 2;
@@ -1176,23 +1122,20 @@ message CatchPokemonOutProto
 		CATCH_MISSED = 4;
 	}
 
-	enum CaptureReason
-	{
+	enum CaptureReason {
 		UNSET = 0;
 		DEFAULT = 1;
 		ELEMENTAL_BADGE = 2;
 	}
 }
 
-message UseItemCaptureProto
-{
+message UseItemCaptureProto {
 	Item item = 1;
 	fixed64 encounter_id = 2;
 	string spawn_point_guid = 3;
 }
 
-message UseItemCaptureOutProto
-{
+message UseItemCaptureOutProto {
 	bool success = 1;
 	double item_capture_mult = 2;
 	double item_flee_mult = 3;
@@ -1202,52 +1145,44 @@ message UseItemCaptureOutProto
 	bool target_slow = 7;
 }
 
-message EncounterTutorialCompleteProto
-{
+message EncounterTutorialCompleteProto {
 	int32 pokedex_id = 1;
 }
 
-message EncounterTutorialCompleteOutProto
-{
+message EncounterTutorialCompleteOutProto {
 	Result result = 1;
 	PokemonProto pokemon = 2;
 	CaptureScoreProto scores = 3;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_INVALID_POKEMON = 2;
 	}
 }
 
-message CaptureProbabilityProto
-{
+message CaptureProbabilityProto {
 	repeated Item pokeball_type = 1;
 	repeated float capture_probability = 2;
 	double reticle_difficulty_scale = 12;
 }
 
-message CaptureScoreProto
-{
+message CaptureScoreProto {
 	repeated HoloActivityType activity_type = 1;
 	repeated int32 exp = 2;
 	repeated int32 candy = 3;
 	repeated int32 stardust = 4;
 }
 
-message UseIncenseActionProto
-{
+message UseIncenseActionProto {
 	Item incense_type = 1;
 }
 
-message UseIncenseActionOutProto
-{
+message UseIncenseActionOutProto {
 	Result result = 1;
 	AppliedItemProto applied_incense = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNKNOWN = 0;
 		SUCCESS = 1;
 		INCENSE_ALREADY_ACTIVE = 2;
@@ -1256,14 +1191,12 @@ message UseIncenseActionOutProto
 	}
 }
 
-message GetIncensePokemonProto
-{
+message GetIncensePokemonProto {
 	double player_lat_degrees = 1;
 	double player_lng_degrees = 2;
 }
 
-message GetIncensePokemonOutProto
-{
+message GetIncensePokemonOutProto {
 	Result result = 1;
 	int32 pokemon_type_id = 2;
 	double lat = 3;
@@ -1272,28 +1205,24 @@ message GetIncensePokemonOutProto
 	fixed64 encounter_id = 6;
 	int64 disappear_time_ms = 7;
 
-	enum Result
-	{
+	enum Result {
 		INCENSE_ENCOUNTER_UNKNOWN = 0;
 		INCENSE_ENCOUNTER_AVAILABLE = 1;
 		INCENSE_ENCOUNTER_NOT_AVAILABLE = 2;
 	}
 }
 
-message IncenseEncounterProto
-{
+message IncenseEncounterProto {
 	int64 encounter_id = 1;
 	string encounter_location = 2;
 }
 
-message IncenseEncounterOutProto
-{
+message IncenseEncounterOutProto {
 	Result result = 1;
 	PokemonProto pokemon = 2;
 	CaptureProbabilityProto capture_probability = 3;
 
-	enum Result
-	{
+	enum Result {
 		INCENSE_ENCOUNTER_UNKNOWN = 0;
 		INCENSE_ENCOUNTER_SUCCESS = 1;
 		INCENSE_ENCOUNTER_NOT_AVAILABLE = 2;
@@ -1301,22 +1230,19 @@ message IncenseEncounterOutProto
 	}
 }
 
-message DiskEncounterProto
-{
+message DiskEncounterProto {
 	int64 encounter_id = 1;
 	string fort_id = 2;
 	double player_lat_degrees = 3;
 	double player_lng_degrees = 4;
 }
 
-message DiskEncounterOutProto
-{
+message DiskEncounterOutProto {
 	Result result = 1;
 	PokemonProto pokemon = 2;
 	CaptureProbabilityProto capture_probability = 3;
 
-	enum Result
-	{
+	enum Result {
 		UNKNOWN = 0;
 		SUCCESS = 1;
 		NOT_AVAILABLE = 2;
@@ -1326,20 +1252,17 @@ message DiskEncounterOutProto
 	}
 }
 
-message EvolvePokemonProto
-{
+message EvolvePokemonProto {
 	fixed64 pokemon_id = 1;
 }
 
-message EvolvePokemonOutProto
-{
+message EvolvePokemonOutProto {
 	Result result = 1;
 	PokemonProto evolved_pokemon = 2;
 	int32 exp_awarded = 3;
 	int32 candy_awarded = 4;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		FAILED_POKEMON_MISSING = 2;
@@ -1349,14 +1272,12 @@ message EvolvePokemonOutProto
 	}
 }
 
-message AwardItemProto
-{
+message AwardItemProto {
 	Item item = 1;
 	int32 item_count = 2;
 }
 
-message FortSearchProto
-{
+message FortSearchProto {
 	string id = 1;
 	double player_lat_degrees = 2;
 	double player_lng_degrees = 3;
@@ -1364,8 +1285,7 @@ message FortSearchProto
 	double fort_lng_degrees = 5;
 }
 
-message FortSearchOutProto
-{
+message FortSearchOutProto {
 	Result result = 1;
 	repeated AwardItemProto items = 2;
 	int32 gems_awarded = 3;
@@ -1374,8 +1294,7 @@ message FortSearchOutProto
 	int64 cooldown_complete = 6;
 	int32 chain_hack_sequence_number = 7;
 
-	enum Result
-	{
+	enum Result {
 		NO_RESULT_SET = 0;
 		SUCCESS = 1;
 		OUT_OF_RANGE = 2;
@@ -1385,15 +1304,13 @@ message FortSearchOutProto
 	}
 }
 
-message FortDetailsProto
-{
+message FortDetailsProto {
 	string id = 1;
 	double latitude = 2;
 	double longitude = 3;
 }
 
-message FortDetailsOutProto
-{
+message FortDetailsOutProto {
 	string id = 1;
 	int32 team = 2;
 	repeated PokemonProto pokemon = 3;
@@ -1409,30 +1326,26 @@ message FortDetailsOutProto
 	repeated ClientFortModifierProto modifier = 13;
 }
 
-message ClientFortModifierProto
-{
+message ClientFortModifierProto {
 	Item modifier_type = 1;
 	int64 expiration_time_ms = 2;
 	string deploying_player_codename = 3;
 }
 
-message FortDeployProto
-{
+message FortDeployProto {
 	string fort_id = 1;
 	fixed64 pokemon_id = 2;
 	double player_lat_degrees = 3;
 	double player_lng_degrees = 4;
 }
 
-message FortDeployOutProto
-{
+message FortDeployOutProto {
 	Result result = 1;
 	FortDetailsOutProto fort_details_out_proto = 2;
 	PokemonProto egg_pokemon = 3;
 	GymStateProto gym_state_proto = 4;
 
-	enum Result
-	{
+	enum Result {
 		NO_RESULT_SET = 0;
 		SUCCESS = 1;
 		ERROR_ALREADY_HAS_POKEMON_ON_FORT = 2;
@@ -1447,21 +1360,18 @@ message FortDeployOutProto
 	}
 }
 
-message FortRecallProto
-{
+message FortRecallProto {
 	string fort_id = 1;
 	fixed64 pokemon_id = 2;
 	double player_lat_degrees = 3;
 	double player_lng_degrees = 4;
 }
 
-message FortRecallOutProto
-{
+message FortRecallOutProto {
 	Result result = 1;
 	FortDetailsOutProto fort_details_out_proto = 2;
 
-	enum Result
-	{
+	enum Result {
 		NO_RESULT_SET = 0;
 		SUCCESS = 1;
 		ERROR_NOT_IN_RANGE = 2;
@@ -1470,21 +1380,18 @@ message FortRecallOutProto
 	}
 }
 
-message AddFortModifierProto
-{
+message AddFortModifierProto {
 	Item modifier_type = 1;
 	string fort_id = 2;
 	double player_lat_degrees = 3;
 	double player_lng_degrees = 4;
 }
 
-message AddFortModifierOutProto
-{
+message AddFortModifierOutProto {
 	Result result = 1;
 	FortDetailsOutProto fort_details_out_proto = 2;
 
-	enum Result
-	{
+	enum Result {
 		NO_RESULT_SET = 0;
 		SUCCESS = 1;
 		FORT_ALREADY_HAS_MODIFIER = 2;
@@ -1493,8 +1400,7 @@ message AddFortModifierOutProto
 	}
 }
 
-message PokemonCameraAttributesProto
-{
+message PokemonCameraAttributesProto {
 	float disk_radius_m = 1;
 	float cyl_radius_m = 2;
 	float cyl_height_m = 3;
@@ -1502,8 +1408,7 @@ message PokemonCameraAttributesProto
 	float shoulder_mode_scale = 5;
 }
 
-message PokemonEncounterAttributesProto
-{
+message PokemonEncounterAttributesProto {
 	float base_capture_rate = 1;
 	float base_flee_rate = 2;
 	float collision_radius_m = 3;
@@ -1515,16 +1420,14 @@ message PokemonEncounterAttributesProto
 	float attack_timer_s = 9;
 }
 
-message PokemonStatsAttributesProto
-{
+message PokemonStatsAttributesProto {
 	int32 base_stamina = 1;
 	int32 base_attack = 2;
 	int32 base_defense = 3;
 	int32 dodge_energy_delta = 8;
 }
 
-message PokemonSettingsProto
-{
+message PokemonSettingsProto {
 	HoloPokemonId unique_id = 1;
 	float model_scale = 3;
 	HoloPokemonType type1 = 4;
@@ -1550,8 +1453,7 @@ message PokemonSettingsProto
 	BuddySize buddy_size = 24;
 	float model_height = 25;
 
-	enum BuddySize
-	{
+	enum BuddySize {
 		BUDDY_MEDIUM = 0;
 		BUDDY_SHOULDER = 1;
 		BUDDY_BIG = 2;
@@ -1559,61 +1461,52 @@ message PokemonSettingsProto
 	}
 }
 
-message PokeBallAttributesProto
-{
+message PokeBallAttributesProto {
 	HoloItemEffect item_effect = 1;
 	float capture_multi = 2;
 	float capture_multi_effect = 3;
 	float item_effect_mod = 4;
 }
 
-message PotionAttributesProto
-{
+message PotionAttributesProto {
 	float sta_percent = 1;
 	int32 sta_amount = 2;
 }
 
-message ReviveAttributesProto
-{
+message ReviveAttributesProto {
 	float sta_percent = 1;
 }
 
-message BattleAttributesProto
-{
+message BattleAttributesProto {
 	float sta_percent = 1;
 	float atk_percent = 2;
 	float def_percent = 3;
 	float duration_s = 4;
 }
 
-message FoodAttributesProto
-{
+message FoodAttributesProto {
 	repeated HoloItemEffect item_effect = 1;
 	repeated float item_effect_percent = 2;
 	float growth_percent = 3;
 }
 
-message InventoryUpgradeAttributesProto
-{
+message InventoryUpgradeAttributesProto {
 	int32 additional_storage = 1;
 	InventoryUpgradeType upgrade_type = 2;
 }
 
-message ExperienceBoostAttributesProto
-{
+message ExperienceBoostAttributesProto {
 	float xp_multiplier = 1;
 	int32 boost_duration_ms = 2;
 }
 
-message EggIncubatorAttributesProto
-{
+message EggIncubatorAttributesProto {
 	EggIncubatorType incubator_type = 1;
 	int32 uses = 2;
 	float distance_multiplier = 3;
 }
 
-message IncenseAttributesProto
-{
+message IncenseAttributesProto {
 	int32 incense_lifetime_seconds = 1;
 	repeated HoloPokemonType pokemon_type = 2;
 	float pokemon_incense_type_probability = 3;
@@ -1623,14 +1516,12 @@ message IncenseAttributesProto
 	int32 pokemon_attracted_length_sec = 7;
 }
 
-message FortModifierAttributesProto
-{
+message FortModifierAttributesProto {
 	int32 modifier_lifetime_seconds = 1;
 	int32 troy_disk_num_pokemon_spawned = 2;
 }
 
-message ItemSettingsProto
-{
+message ItemSettingsProto {
 	Item unique_id = 1;
 	HoloItemType item_type = 2;
 	HoloItemCategory category = 3;
@@ -1648,8 +1539,7 @@ message ItemSettingsProto
 	FortModifierAttributesProto fort_modifier = 15;
 }
 
-message IapItemDisplayProto
-{
+message IapItemDisplayProto {
 	string sku = 1;
 	HoloIapItemCategory category = 2;
 	int32 sort_order = 3;
@@ -1657,8 +1547,7 @@ message IapItemDisplayProto
 	repeated int32 counts = 5;
 }
 
-message MoveSettingsProto
-{
+message MoveSettingsProto {
 	HoloPokemonMove unique_id = 1;
 	int32 animation_id = 2;
 	HoloPokemonType type = 3;
@@ -1676,32 +1565,27 @@ message MoveSettingsProto
 	int32 energy_delta = 15;
 }
 
-message MoveSequenceSettingsProto
-{
+message MoveSequenceSettingsProto {
 	repeated string sequence = 1;
 }
 
-message TypeEffectiveSettingsProto
-{
+message TypeEffectiveSettingsProto {
 	HoloPokemonType attack_type = 2;
 	repeated float attack_scalar = 1;
 }
 
-message BadgeSettingsProto
-{
+message BadgeSettingsProto {
 	HoloBadgeType badge_type = 1;
 	int32 badge_ranks = 2;
 	repeated int32 targets = 3;
 	repeated BadgeCaptureReward capture_reward = 4;
 }
 
-message BadgeCaptureReward
-{
+message BadgeCaptureReward {
 	float capture_reward_multiplier = 1;
 }
 
-message CameraSettingsProto
-{
+message CameraSettingsProto {
 	string next_camera = 1;
 	repeated CameraInterpolation interpolation = 2;
 	repeated CameraTarget target_type = 3;
@@ -1720,8 +1604,7 @@ message CameraSettingsProto
 	repeated float vert_ctr_ratio = 16;
 }
 
-message PlayerLevelSettingsProto
-{
+message PlayerLevelSettingsProto {
 	repeated int32 rank_num = 1;
 	repeated int32 required_exp = 2;
 	repeated float cp_multiplier = 3;
@@ -1729,16 +1612,14 @@ message PlayerLevelSettingsProto
 	int32 max_encounter_player_level = 5;
 }
 
-message GymLevelSettingsProto
-{
+message GymLevelSettingsProto {
 	repeated int32 required_exp = 1;
 	repeated int32 leader_slots = 2;
 	repeated int32 trainer_slots = 3;
 	repeated int32 search_roll_bonus = 4;
 }
 
-message GymBattleSettingsProto
-{
+message GymBattleSettingsProto {
 	float energy_per_sec = 1;
 	float dodge_energy_cost = 2;
 	float retarget_seconds = 3;
@@ -1756,8 +1637,7 @@ message GymBattleSettingsProto
 	float dodge_damage_reduction_percent = 15;
 }
 
-message EncounterSettingsProto
-{
+message EncounterSettingsProto {
 	float spin_bonus_threshold = 1;
 	float excellent_throw_threshold = 2;
 	float great_throw_threshold = 3;
@@ -1765,8 +1645,7 @@ message EncounterSettingsProto
 	int32 milestone_threshold = 5;
 }
 
-message IapSettingsProto
-{
+message IapSettingsProto {
 	int32 daily_bonus_coins = 1;
 	repeated int32 daily_defender_bonus_per_pokemon = 2;
 	int32 daily_defender_bonus_max_defenders = 3;
@@ -1776,37 +1655,32 @@ message IapSettingsProto
 	bool daily_defender_bonus_enabled = 7;
 }
 
-message PokemonUpgradeSettingsProto
-{
+message PokemonUpgradeSettingsProto {
 	int32 upgrades_per_level = 1;
 	int32 allowed_levels_above_player = 2;
 	repeated int32 candy_cost = 3;
 	repeated int32 stardust_cost = 4;
 }
 
-message EquippedBadgeSettingsProto
-{
+message EquippedBadgeSettingsProto {
 	int64 equip_badge_cooldown_ms = 1;
 	repeated float catch_probability_bonus = 2;
 	repeated float flee_probability_bonus = 3;
 }
 
-message DailyQuestSettings
-{
+message DailyQuestSettings {
 	int32 buckets_per_day = 1;
 	int32 streak_length = 2;
 	float bonus_multiplier = 3;
 	float streak_bonus_multiplier = 4;
 }
 
-message QuestSettingsProto
-{
+message QuestSettingsProto {
 	QuestType quest_type = 1;
 	DailyQuestSettings daily_quest = 2;
 }
 
-message GameMasterClientTemplateProto
-{
+message GameMasterClientTemplateProto {
 	string template_id = 1;
 	PokemonSettingsProto pokemon = 2;
 	ItemSettingsProto item = 3;
@@ -1826,25 +1700,21 @@ message GameMasterClientTemplateProto
 	QuestSettingsProto quest_settings = 20;
 }
 
-message GetGameMasterClientTemplatesProto
-{
+message GetGameMasterClientTemplatesProto {
 }
 
-message GetGameMasterClientTemplatesOutProto
-{
+message GetGameMasterClientTemplatesOutProto {
 	Result result = 1;
 	repeated GameMasterClientTemplateProto items = 2;
 	uint64 timestamp = 3;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 	}
 }
 
-message GetRemoteConfigVersionsProto
-{
+message GetRemoteConfigVersionsProto {
 	Platform platform = 1;
 	string device_manufacturer = 2;
 	string device_model = 3;
@@ -1852,21 +1722,18 @@ message GetRemoteConfigVersionsProto
 	uint32 app_version = 5;
 }
 
-message GetRemoteConfigVersionsOutProto
-{
+message GetRemoteConfigVersionsOutProto {
 	Result result = 1;
 	uint64 game_master_timestamp = 2;
 	uint64 asset_digest_timestamp = 3;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 	}
 }
 
-message ClientMapCellProto
-{
+message ClientMapCellProto {
 	uint64 s2_cell_id = 1;
 	int64 as_of_time_ms = 2;
 	repeated PokemonFortProto fort = 3;
@@ -1880,29 +1747,25 @@ message ClientMapCellProto
 	repeated NearbyPokemonProto nearby_pokemon = 11;
 }
 
-message GetMapObjectsProto
-{
+message GetMapObjectsProto {
 	repeated uint64 cell_id = 1;
 	repeated int64 since_time_ms = 2;
 	double player_lat = 3;
 	double player_lng = 4;
 }
 
-message GetMapObjectsOutProto
-{
+message GetMapObjectsOutProto {
 	repeated ClientMapCellProto map_cell = 1;
 	Status status = 2;
 
-	enum Status
-	{
+	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		LOCATION_UNSET = 2;
 	}
 }
 
-message NearbyPokemonProto
-{
+message NearbyPokemonProto {
 	int32 pokedex_number = 1;
 	float distance_meters = 2;
 	fixed64 encounter_id = 3;
@@ -1910,8 +1773,7 @@ message NearbyPokemonProto
 	string fort_image_url = 5;
 }
 
-message GetGymDetailsProto
-{
+message GetGymDetailsProto {
 	string gym_id = 1;
 	double player_lat_degrees = 2;
 	double player_lng_degrees = 3;
@@ -1920,31 +1782,27 @@ message GetGymDetailsProto
 	string client_version = 6;
 }
 
-message GetGymDetailsOutProto
-{
+message GetGymDetailsOutProto {
 	GymStateProto gym_state = 1;
 	string name = 2;
 	repeated string url = 3;
 	Result result = 4;
 	string description = 5;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_NOT_IN_RANGE = 2;
 	}
 }
 
-message GymStateProto
-{
+message GymStateProto {
 	PokemonFortProto fort_map_data = 1;
 	repeated GymMembershipProto gym_membership = 2;
 	bool deploy_lockout = 3;
 }
 
-message StartGymBattleProto
-{
+message StartGymBattleProto {
 	string gym_id = 1;
 	repeated fixed64 attacking_pokemon_id = 2;
 	fixed64 defending_pokemon_id = 3;
@@ -1952,8 +1810,7 @@ message StartGymBattleProto
 	double player_lng_degrees = 5;
 }
 
-message StartGymBattleOutProto
-{
+message StartGymBattleOutProto {
 	Result result = 1;
 	int64 battle_start_ms = 2;
 	int64 battle_end_ms = 3;
@@ -1962,8 +1819,7 @@ message StartGymBattleOutProto
 	BattleLogProto battle_log = 6;
 	BattleParticipantProto attacker = 7;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_GYM_NOT_FOUND = 2;
@@ -1981,8 +1837,7 @@ message StartGymBattleOutProto
 	}
 }
 
-message AttackGymProto
-{
+message AttackGymProto {
 	string gym_id = 1;
 	string battle_id = 2;
 	repeated BattleActionProto attacker_actions = 3;
@@ -1991,8 +1846,7 @@ message AttackGymProto
 	double player_lng_degrees = 6;
 }
 
-message BattleActionProto
-{
+message BattleActionProto {
 	ActionType type = 1;
 	int64 action_start_ms = 2;
 	int32 duration_ms = 3;
@@ -2007,8 +1861,7 @@ message BattleActionProto
 	BattleParticipantProto quit_player = 13;
 	fixed64 target_pokemon_id = 14;
 
-	enum ActionType
-	{
+	enum ActionType {
 		UNSET = 0;
 		ATTACK = 1;
 		DODGE = 2;
@@ -2023,16 +1876,14 @@ message BattleActionProto
 	}
 }
 
-message AttackGymOutProto
-{
+message AttackGymOutProto {
 	Result result = 1;
 	BattleLogProto battle_log = 2;
 	string battle_id = 3;
 	PokemonInfo active_defender = 4;
 	PokemonInfo active_attacker = 5;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_INVALID_ATTACK_ACTIONS = 2;
@@ -2040,30 +1891,26 @@ message AttackGymOutProto
 	}
 }
 
-message GymMembershipProto
-{
+message GymMembershipProto {
 	PokemonProto pokemon = 1;
 	PlayerPublicProfileProto trainer_public_profile = 2;
 	PokemonProto training_pokemon = 3;
 }
 
-message BattleParticipantProto
-{
+message BattleParticipantProto {
 	PokemonInfo active_pokemon = 1;
 	PlayerPublicProfileProto trainer_public_profile = 2;
 	repeated PokemonInfo reserve_pokemon = 3;
 	repeated PokemonInfo defeated_pokemon = 4;
 }
 
-message PokemonInfo
-{
+message PokemonInfo {
 	PokemonProto pokemon = 1;
 	int32 current_health = 2;
 	int32 current_energy = 3;
 }
 
-message BattleResultsProto
-{
+message BattleResultsProto {
 	GymStateProto gym_state = 1;
 	repeated BattleParticipantProto attackers = 2;
 	repeated int32 player_xp_awarded = 3;
@@ -2071,8 +1918,7 @@ message BattleResultsProto
 	int32 gym_points_delta = 5;
 }
 
-message BattleLogProto
-{
+message BattleLogProto {
 	State state = 1;
 	BattleType battle_type = 2;
 	int64 server_ms = 3;
@@ -2080,8 +1926,7 @@ message BattleLogProto
 	int64 battle_start_ms = 5;
 	int64 battle_end_ms = 6;
 
-	enum State
-	{
+	enum State {
 		STATE_UNSET = 0;
 		ACTIVE = 1;
 		VICTORY = 2;
@@ -2089,16 +1934,14 @@ message BattleLogProto
 		TIMED_OUT = 4;
 	}
 
-	enum BattleType
-	{
+	enum BattleType {
 		BATTLE_TYPE_UNSET = 0;
 		NORMAL = 1;
 		TRAINING = 2;
 	}
 }
 
-message HoloInventoryKeyProto
-{
+message HoloInventoryKeyProto {
 	fixed64 pokemon_id = 1;
 	Item item = 2;
 	int32 pokedex_entry_id = 3;
@@ -2112,8 +1955,7 @@ message HoloInventoryKeyProto
 	QuestType quest_type = 11;
 }
 
-message HoloInventoryItemProto
-{
+message HoloInventoryItemProto {
 	PokemonProto pokemon = 1;
 	ItemProto item = 2;
 	PokedexEntryProto pokedex_entry = 3;
@@ -2127,16 +1969,13 @@ message HoloInventoryItemProto
 	QuestProto quest = 11;
 }
 
-message FortSponsor
-{
+message FortSponsor {
 }
 
-message FortRenderingType
-{
+message FortRenderingType {
 }
 
-message PokemonProto
-{
+message PokemonProto {
 	fixed64 id = 1;
 	int32 pokemon_id = 2;
 	int32 cp = 3;
@@ -2173,15 +2012,13 @@ message PokemonProto
 	int32 display_cp = 35;
 }
 
-message ItemProto
-{
+message ItemProto {
 	Item item = 1;
 	int32 count = 2;
 	bool unseen = 3;
 }
 
-message PokedexEntryProto
-{
+message PokedexEntryProto {
 	int32 pokedex_entry_number = 1;
 	int32 times_encountered = 2;
 	int32 times_captured = 3;
@@ -2189,8 +2026,7 @@ message PokedexEntryProto
 	int32 evolution_stones = 5;
 }
 
-message PlayerStatsProto
-{
+message PlayerStatsProto {
 	int32 level = 1;
 	int64 experience = 2;
 	int64 prev_level_exp = 3;
@@ -2216,47 +2052,39 @@ message PlayerStatsProto
 	int32 small_rattata_caught = 23;
 }
 
-message PlayerCurrencyProto
-{
+message PlayerCurrencyProto {
 	int32 gems = 1;
 }
 
-message PlayerCameraProto
-{
+message PlayerCameraProto {
 	bool default_camera = 1;
 }
 
-message InventoryUpgradesProto
-{
+message InventoryUpgradesProto {
 	repeated InventoryUpgradeProto inventory_upgrade = 1;
 }
 
-message InventoryUpgradeProto
-{
+message InventoryUpgradeProto {
 	Item item = 1;
 	InventoryUpgradeType upgrade_type = 2;
 	int32 additional_storage = 3;
 }
 
-message DailyQuestProto
-{
+message DailyQuestProto {
 	int32 current_period_bucket = 1;
 	int32 current_streak_count = 2;
 }
 
-message QuestProto
-{
+message QuestProto {
 	QuestType quest_type = 1;
 	DailyQuestProto daily_quest = 2;
 }
 
-message EggIncubatorsProto
-{
+message EggIncubatorsProto {
 	repeated EggIncubatorProto egg_incubator = 1;
 }
 
-message EggIncubatorProto
-{
+message EggIncubatorProto {
 	string item_id = 1;
 	Item item = 2;
 	EggIncubatorType incubator_type = 3;
@@ -2266,41 +2094,35 @@ message EggIncubatorProto
 	double target_km_walked = 7;
 }
 
-message AppliedItemsProto
-{
+message AppliedItemsProto {
 	repeated AppliedItemProto item = 4;
 }
 
-message AppliedItemProto
-{
+message AppliedItemProto {
 	Item item = 1;
 	HoloItemType item_type = 2;
 	int64 expiration_ms = 3;
 	int64 applied_ms = 4;
 }
 
-message PokemonFamilyProto
-{
+message PokemonFamilyProto {
 	HoloPokemonFamilyId family_id = 1;
 	int32 candy = 2;
 }
 
-message BuddyPokemonProto
-{
+message BuddyPokemonProto {
 	fixed64 buddy_pokemon_id = 1;
 	double start_km_walked = 2;
 	double last_km_awarded = 3;
 }
 
-message PlayerPublicProfileProto
-{
+message PlayerPublicProfileProto {
 	string name = 1;
 	int32 level = 2;
 	PlayerAvatarProto avatar = 3;
 }
 
-message PlayerAvatarProto
-{
+message PlayerAvatarProto {
 	int32 avatar = 8;
 	int32 skin = 2;
 	int32 hair = 3;
@@ -2312,8 +2134,7 @@ message PlayerAvatarProto
 	int32 backpack = 10;
 }
 
-message ActionLogEntry
-{
+message ActionLogEntry {
 	int64 timestamp_ms = 1;
 	bool sfida = 2;
 	CatchPokemonLogEntry catch_pokemon = 3;
@@ -2321,15 +2142,13 @@ message ActionLogEntry
 	BuddyPokemonLogEntry buddy_pokemon = 5;
 }
 
-message CatchPokemonLogEntry
-{
+message CatchPokemonLogEntry {
 	Result result = 1;
 	int32 pokedex_number = 2;
 	int32 combat_points = 3;
 	fixed64 pokemon_id = 4;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		POKEMON_CAPTURED = 1;
 		POKEMON_FLED = 2;
@@ -2337,54 +2156,46 @@ message CatchPokemonLogEntry
 	}
 }
 
-message BuddyPokemonLogEntry
-{
+message BuddyPokemonLogEntry {
 	Result result = 1;
 	HoloPokemonId pokemon_type = 2;
 	int32 amount = 3;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		CANDY_FOUND = 1;
 	}
 }
 
-message FortSearchLogEntry
-{
+message FortSearchLogEntry {
 	Result result = 1;
 	string fort_id = 2;
 	repeated ItemProto items = 3;
 	int32 eggs = 4;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 	}
 }
 
-message InventoryProto
-{
+message InventoryProto {
 	repeated InventoryItemProto inventory_item = 1;
 }
 
-message InventoryItemProto
-{
+message InventoryItemProto {
 	int64 modified_timestamp = 1;
 	bytes deleted_item_key = 2;
 	bytes item = 3;
 }
 
-message InventoryDeltaProto
-{
+message InventoryDeltaProto {
 	int64 original_timestamp = 1;
 	int64 new_timestamp = 2;
 	repeated InventoryItemProto inventory_item = 3;
 }
 
-message PlayerBadgeProto
-{
+message PlayerBadgeProto {
 	HoloBadgeType badge_type = 1;
 	int32 rank = 2;
 	int32 start_value = 3;
@@ -2392,45 +2203,38 @@ message PlayerBadgeProto
 	double current_value = 5;
 }
 
-message PlayerProfileProto
-{
+message PlayerProfileProto {
 	string player_name = 1;
 }
 
-message PlayerProfileOutProto
-{
+message PlayerProfileOutProto {
 	Result result = 1;
 	int64 start_time = 2;
 	repeated PlayerBadgeProto badges = 3;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 	}
 }
 
-message LevelUpRewardsProto
-{
+message LevelUpRewardsProto {
 	int32 level = 1;
 }
 
-message LevelUpRewardsOutProto
-{
+message LevelUpRewardsOutProto {
 	Result result = 1;
 	repeated AwardItemProto items = 2;
 	repeated Item items_unlocked = 4;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		AWARDED_ALREADY = 2;
 	}
 }
 
-message PokemonFortProto
-{
+message PokemonFortProto {
 	string fort_id = 1;
 	int64 last_modified_ms = 2;
 	double latitude = 3;
@@ -2449,8 +2253,7 @@ message PokemonFortProto
 	RenderingType rendering_type = 16;
 	int64 deploy_lockout_end_ms = 17;
 
-	enum Sponsor
-	{
+	enum Sponsor {
 		UNSET = 0;
 		MCDONALDS = 1;
 		POKEMON_STORE = 2;
@@ -2459,29 +2262,25 @@ message PokemonFortProto
 		GLOBE = 5;
 	}
 
-	enum RenderingType
-	{
+	enum RenderingType {
 		DEFAULT = 0;
 		INTERNAL_TEST = 1;
 	}
 }
 
-message PokemonSummaryFortProto
-{
+message PokemonSummaryFortProto {
 	string fort_summary_id = 1;
 	int64 last_modified_ms = 2;
 	double latitude = 3;
 	double longitude = 4;
 }
 
-message ClientSpawnPointProto
-{
+message ClientSpawnPointProto {
 	double latitude = 2;
 	double longitude = 3;
 }
 
-message WildPokemonProto
-{
+message WildPokemonProto {
 	fixed64 encounter_id = 1;
 	int64 last_modified_ms = 2;
 	double latitude = 3;
@@ -2491,8 +2290,7 @@ message WildPokemonProto
 	int32 time_till_hidden_ms = 11;
 }
 
-message MapPokemonProto
-{
+message MapPokemonProto {
 	string spawnpoint_id = 1;
 	fixed64 encounter_id = 2;
 	int32 pokedex_type_id = 3;
@@ -2501,8 +2299,7 @@ message MapPokemonProto
 	double longitude = 6;
 }
 
-message ClientPlayerProto
-{
+message ClientPlayerProto {
 	int64 creation_time_ms = 1;
 	string name = 2;
 	int32 team = 5;
@@ -2519,99 +2316,83 @@ message ClientPlayerProto
 	int64 battle_lockout_end_ms = 17;
 }
 
-message CurrencyQuantityProto
-{
+message CurrencyQuantityProto {
 	string currency_type = 1;
 	int32 quantity = 2;
 }
 
-message ContactSettingsProto
-{
+message ContactSettingsProto {
 	bool send_marketing_emails = 1;
 	bool send_push_notifications = 2;
 }
 
-message DailyBonusProto
-{
+message DailyBonusProto {
 	int64 next_collect_timestamp_ms = 1;
 	int64 next_defender_bonus_collect_timestamp_ms = 2;
 }
 
-message EquippedBadgeProto
-{
+message EquippedBadgeProto {
 	HoloBadgeType equipped_badge = 1;
 	int32 level = 2;
 	int64 next_equip_change_allowed_timestamp_ms = 3;
 }
 
-message PlayerLocaleProto
-{
+message PlayerLocaleProto {
 	string country = 1;
 	string language = 2;
 	string timezone = 3;
 }
 
-message GetPlayerProto
-{
+message GetPlayerProto {
 	PlayerLocaleProto player_locale = 1;
 }
 
-message GetPlayerOutProto
-{
+message GetPlayerOutProto {
 	bool success = 1;
 	ClientPlayerProto player = 2;
 	bool banned = 3;
 	bool warn = 4;
 }
 
-message PlayerUpdateProto
-{
+message PlayerUpdateProto {
 	double lat = 1;
 	double lng = 2;
 }
 
-message PlayerUpdateOutProto
-{
+message PlayerUpdateOutProto {
 	repeated WildPokemonProto wild_pokemon = 1;
 	repeated PokemonFortProto fort = 2;
 	int32 forts_nearby = 3;
 }
 
-message GetInventoryProto
-{
+message GetInventoryProto {
 	int64 timestamp_millis = 1;
 	repeated Item item_been_seen = 2;
 }
 
-message GetInventoryOutProto
-{
+message GetInventoryOutProto {
 	bool success = 1;
 	InventoryDeltaProto inventory_delta = 2;
 }
 
-message DebugUpdateInventoryProto
-{
+message DebugUpdateInventoryProto {
 	repeated PokemonProto pokemon = 1;
 	repeated ItemProto item = 2;
 }
 
-message DebugUpdateInventoryOutProto
-{
+message DebugUpdateInventoryOutProto {
 	bool success = 1;
 }
 
-message SetFavoritePokemonProto
-{
+message SetFavoritePokemonProto {
 	int64 pokemon_id = 1;
 	bool is_favorite = 2;
 }
 
-message SetFavoritePokemonOutProto
-{
+message SetFavoritePokemonOutProto {
 	Result result = 1;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_POKEMON_NOT_FOUND = 2;
@@ -2619,19 +2400,16 @@ message SetFavoritePokemonOutProto
 	}
 }
 
-message ReleasePokemonProto
-{
+message ReleasePokemonProto {
 	fixed64 pokemon_id = 1;
 	repeated fixed64 pokemon_ids = 2;
 }
 
-message ReleasePokemonOutProto
-{
+message ReleasePokemonOutProto {
 	Status status = 1;
 	int32 candy_awarded = 2;
 
-	enum Status
-	{
+	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		POKEMON_DEPLOYED = 2;
@@ -2641,18 +2419,15 @@ message ReleasePokemonOutProto
 	}
 }
 
-message NicknamePokemonProto
-{
+message NicknamePokemonProto {
 	fixed64 pokemon_id = 1;
 	string nickname = 2;
 }
 
-message NicknamePokemonOutProto
-{
+message NicknamePokemonOutProto {
 	Result result = 1;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_INVALID_NICKNAME = 2;
@@ -2661,45 +2436,37 @@ message NicknamePokemonOutProto
 	}
 }
 
-message DebugDeletePlayerProto
-{
+message DebugDeletePlayerProto {
 }
 
-message DebugDeletePlayerOutProto
-{
+message DebugDeletePlayerOutProto {
 	bool success = 1;
 }
 
-message GetSuggestedCodenamesRequestProto
-{
+message GetSuggestedCodenamesRequestProto {
 }
 
-message GetSuggestedCodenamesResponseProto
-{
+message GetSuggestedCodenamesResponseProto {
 	repeated string codename = 1;
 	bool success = 2;
 }
 
-message CheckCodenameAvailableRequestProto
-{
+message CheckCodenameAvailableRequestProto {
 	string codename = 1;
 }
 
-message ClaimCodenameRequestProto
-{
+message ClaimCodenameRequestProto {
 	string codename = 1;
 }
 
-message CodenameResultProto
-{
+message CodenameResultProto {
 	string codename = 1;
 	string user_message = 2;
 	bool is_assignable = 3;
 	Status status = 4;
 	ClientPlayerProto updated_player = 5;
 
-	enum Status
-	{
+	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		CODENAME_NOT_AVAILABLE = 2;
@@ -2709,18 +2476,15 @@ message CodenameResultProto
 	}
 }
 
-message SetAvatarProto
-{
+message SetAvatarProto {
 	PlayerAvatarProto player_avatar_proto = 2;
 }
 
-message SetAvatarOutProto
-{
+message SetAvatarOutProto {
 	Status status = 1;
 	ClientPlayerProto player = 2;
 
-	enum Status
-	{
+	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		AVATAR_ALREADY_SET = 2;
@@ -2728,36 +2492,30 @@ message SetAvatarOutProto
 	}
 }
 
-message SetContactSettingsProto
-{
+message SetContactSettingsProto {
 	ContactSettingsProto contact_settings_proto = 1;
 }
 
-message SetContactSettingsOutProto
-{
+message SetContactSettingsOutProto {
 	Status status = 1;
 	ClientPlayerProto player = 2;
 
-	enum Status
-	{
+	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		FAILURE = 2;
 	}
 }
 
-message SetPlayerTeamProto
-{
+message SetPlayerTeamProto {
 	Team team = 1;
 }
 
-message SetPlayerTeamOutProto
-{
+message SetPlayerTeamOutProto {
 	Status status = 1;
 	ClientPlayerProto player = 2;
 
-	enum Status
-	{
+	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		TEAM_ALREADY_SET = 2;
@@ -2765,43 +2523,36 @@ message SetPlayerTeamOutProto
 	}
 }
 
-message MarkTutorialCompleteProto
-{
+message MarkTutorialCompleteProto {
 	repeated TutorialCompletion tutorial_complete = 1;
 	bool send_marketing_emails = 2;
 	bool send_push_notifications = 3;
 }
 
-message MarkTutorialCompleteOutProto
-{
+message MarkTutorialCompleteOutProto {
 	bool success = 1;
 	ClientPlayerProto player = 2;
 }
 
-message CheckAwardedBadgesProto
-{
+message CheckAwardedBadgesProto {
 }
 
-message CheckAwardedBadgesOutProto
-{
+message CheckAwardedBadgesOutProto {
 	bool success = 1;
 	repeated HoloBadgeType awarded_badges = 2;
 	repeated int32 awarded_badge_levels = 3;
 }
 
-message RecycleItemProto
-{
+message RecycleItemProto {
 	Item item = 1;
 	int32 count = 2;
 }
 
-message RecycleItemOutProto
-{
+message RecycleItemOutProto {
 	Result result = 1;
 	int32 new_count = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_NOT_ENOUGH_COPIES = 2;
@@ -2809,24 +2560,20 @@ message RecycleItemOutProto
 	}
 }
 
-message PtcToken
-{
+message PtcToken {
 	string token = 1;
 	int32 expiration = 2;
 }
 
-message EquipBadgeProto
-{
+message EquipBadgeProto {
 	HoloBadgeType badge = 1;
 }
 
-message EquipBadgeOutProto
-{
+message EquipBadgeOutProto {
 	Result result = 1;
 	EquippedBadgeProto equipped = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		COOLDOWN_ACTIVE = 2;
@@ -2834,55 +2581,45 @@ message EquipBadgeOutProto
 	}
 }
 
-message GetActionLogRequest
-{
+message GetActionLogRequest {
 }
 
-message GetActionLogResponse
-{
+message GetActionLogResponse {
 	Result result = 1;
 	repeated ActionLogEntry log = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 	}
 }
 
-message CheckChallengeProto
-{
+message CheckChallengeProto {
 	bool debug_request = 1;
 }
 
-message CheckChallengeOutProto
-{
+message CheckChallengeOutProto {
 	bool show_challenge = 1;
 	string challenge_url = 2;
 }
 
-message VerifyChallengeProto
-{
+message VerifyChallengeProto {
 	string token = 1;
 }
 
-message VerifyChallengeOutProto
-{
+message VerifyChallengeOutProto {
 	bool success = 1;
 }
 
-message SetBuddyPokemonProto
-{
+message SetBuddyPokemonProto {
 	fixed64 pokemon_id = 1;
 }
 
-message SetBuddyPokemonOutProto
-{
+message SetBuddyPokemonOutProto {
 	Result result = 1;
 	BuddyPokemonProto updated_buddy = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNEST = 0;
 		SUCCESS = 1;
 		ERROR_POKEMON_DEPLOYED = 2;
@@ -2891,19 +2628,16 @@ message SetBuddyPokemonOutProto
 	}
 }
 
-message GetBuddyWalkedProto
-{
+message GetBuddyWalkedProto {
 }
 
-message GetBuddyWalkedOutProto
-{
+message GetBuddyWalkedOutProto {
 	bool success = 1;
 	HoloPokemonFamilyId family_candy_id = 2;
 	int32 candy_earned_count = 3;
 }
 
-message GlobalSettingsProto
-{
+message GlobalSettingsProto {
 	FortSettingsProto fort_settings = 2;
 	MapSettingsProto map_settings = 3;
 	LevelSettingsProto level_settings = 4;
@@ -2916,8 +2650,7 @@ message GlobalSettingsProto
 	SfidaGlobalSettingsProto sfida_settings = 11;
 }
 
-message FortSettingsProto
-{
+message FortSettingsProto {
 	double interaction_range_meters = 1;
 	int32 max_total_deployed_pokemon = 2;
 	int32 max_player_deployed_pokemon = 3;
@@ -2926,8 +2659,7 @@ message FortSettingsProto
 	double far_interaction_range_meters = 6;
 }
 
-message MapSettingsProto
-{
+message MapSettingsProto {
 	double pokemon_visible_range = 1;
 	double poke_nav_range_meters = 2;
 	double encounter_range_meters = 3;
@@ -2937,14 +2669,12 @@ message MapSettingsProto
 	string google_maps_api_key = 7;
 }
 
-message LevelSettingsProto
-{
+message LevelSettingsProto {
 	double trainer_cp_modifier = 2;
 	double trainer_difficulty_modifier = 3;
 }
 
-message InventorySettingsProto
-{
+message InventorySettingsProto {
 	int32 max_pokemon = 1;
 	int32 max_bag_items = 2;
 	int32 base_pokemon = 3;
@@ -2952,146 +2682,122 @@ message InventorySettingsProto
 	int32 base_eggs = 5;
 }
 
-message GpsSettingsProto
-{
+message GpsSettingsProto {
 	float driving_warning_speed_meters_per_second = 1;
 	float driving_warning_cooldown_minutes = 2;
 	float driving_speed_sample_interval_seconds = 3;
 	int32 driving_speed_sample_count = 4;
 }
 
-message FestivalSettingsProto
-{
+message FestivalSettingsProto {
 	FestivalType festival_type = 1;
 	string key = 2;
 	string vector = 3;
 
-	enum FestivalType
-	{
+	enum FestivalType {
 		NONE = 0;
 		HALLOWEEN = 1;
 	}
 }
 
-message EventSettingsProto
-{
+message EventSettingsProto {
 	repeated string condolence_ribbon_country = 1;
 }
 
-message SfidaGlobalSettingsProto
-{
+message SfidaGlobalSettingsProto {
 	float low_battery_threshold = 1;
 }
 
-message DownloadSettingsActionProto
-{
+message DownloadSettingsActionProto {
 	string sha1 = 1;
 }
 
-message DownloadSettingsResponseProto
-{
+message DownloadSettingsResponseProto {
 	string error = 1;
 	string sha1 = 2;
 	bytes values = 3;
 }
 
-message RegisterSfidaRequest
-{
+message RegisterSfidaRequest {
 	string sfida_id = 1;
 }
 
-message RegisterSfidaResponse
-{
+message RegisterSfidaResponse {
 	bytes access_token = 1;
 }
 
-message TradingSearchProto
-{
+message TradingSearchProto {
 	double lat = 1;
 	double lng = 2;
 }
 
-message TradingSearchOutProto
-{
+message TradingSearchOutProto {
 	Result result = 1;
 	repeated string player_names = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 	}
 }
 
-message TradingOfferProto
-{
+message TradingOfferProto {
 	string trading_player = 1;
 	fixed64 pokemon_id = 2;
 }
 
-message TradingOfferOutProto
-{
+message TradingOfferOutProto {
 	Result result = 1;
 	uint64 trade_id = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		CONNECTION_LOST = 2;
 	}
 }
 
-message PollForTradeResponseProto
-{
+message PollForTradeResponseProto {
 	uint64 trade_id = 1;
 	fixed64 pokemon_id = 2;
 	bool request_cancel = 3;
 }
 
-message PollForTradeResponseOutProto
-{
+message PollForTradeResponseOutProto {
 	Result result = 1;
 	PokemonProto return_pokemon = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		ACCEPT_OFFER = 1;
 		TRADE_CANCELED = 2;
 	}
 }
 
-message TradingResultProto
-{
+message TradingResultProto {
 	uint64 trade_id = 1;
 	bool player_accept = 2;
 }
 
-message TradingResultOutProto
-{
+message TradingResultOutProto {
 	Result result = 1;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		TRADE_COMPLETE = 1;
 		TRADE_CANCELLED_OFFER = 2;
 	}
 }
 
-message UpgradePokemonProto
-{
+message UpgradePokemonProto {
 	fixed64 pokemon_id = 1;
 }
 
-message UpgradePokemonOutProto
-{
+message UpgradePokemonOutProto {
 	Result result = 1;
 	PokemonProto upgraded_pokemon = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_POKEMON_NOT_FOUND = 2;
@@ -3101,19 +2807,16 @@ message UpgradePokemonOutProto
 	}
 }
 
-message UseItemPotionProto
-{
+message UseItemPotionProto {
 	Item item = 1;
 	fixed64 pokemon_id = 2;
 }
 
-message UseItemPotionOutProto
-{
+message UseItemPotionOutProto {
 	Result result = 1;
 	int32 stamina = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_NO_POKEMON = 2;
@@ -3122,19 +2825,16 @@ message UseItemPotionOutProto
 	}
 }
 
-message UseItemReviveProto
-{
+message UseItemReviveProto {
 	Item item = 1;
 	fixed64 pokemon_id = 2;
 }
 
-message UseItemReviveOutProto
-{
+message UseItemReviveOutProto {
 	Result result = 1;
 	int32 stamina = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_NO_POKEMON = 2;
@@ -3143,21 +2843,18 @@ message UseItemReviveOutProto
 	}
 }
 
-message UseItemGymProto
-{
+message UseItemGymProto {
 	Item item = 1;
 	string gym_id = 2;
 	double player_lat_degrees = 3;
 	double player_lng_degrees = 4;
 }
 
-message UseItemGymOutProto
-{
+message UseItemGymOutProto {
 	Result result = 1;
 	int64 updated_gp = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_CANNOT_USE = 2;
@@ -3165,18 +2862,15 @@ message UseItemGymOutProto
 	}
 }
 
-message UseItemXpBoostProto
-{
+message UseItemXpBoostProto {
 	Item item = 1;
 }
 
-message UseItemXpBoostOutProto
-{
+message UseItemXpBoostOutProto {
 	Result result = 1;
 	AppliedItemsProto applied_items = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_INVALID_ITEM_TYPE = 2;
@@ -3186,19 +2880,16 @@ message UseItemXpBoostOutProto
 	}
 }
 
-message UseItemEggIncubatorProto
-{
+message UseItemEggIncubatorProto {
 	string item_id = 1;
 	int64 pokemond_id = 2;
 }
 
-message UseItemEggIncubatorOutProto
-{
+message UseItemEggIncubatorOutProto {
 	Result result = 1;
 	EggIncubatorProto egg_incubator = 2;
 
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_INCUBATOR_NOT_FOUND = 2;
@@ -3210,7 +2901,6 @@ message UseItemEggIncubatorOutProto
 	}
 }
 
-message ClientVersionProto
-{
+message ClientVersionProto {
 	string min_version = 1;
 }
