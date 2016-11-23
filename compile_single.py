@@ -74,7 +74,7 @@ def walk_files(main_file, path, package, imports=None):
 
     if not desc_file and package == "POGOProtos":
         print("Can't compile..")
-        print("File: '%s'" % path)
+        print(("File: '%s'" % path))
         print("Please place the file in 'src/POGOProtos/' in a sub-directory.")
         exit()
 
@@ -109,8 +109,8 @@ def walk_files(main_file, path, package, imports=None):
 
                             if import_from_package_re is None:
                                 print("Can't compile..")
-                                print("File: '%s'" % file_name_path)
-                                print("Bad import line: '%s'" % proto_line)
+                                print(("File: '%s'" % file_name_path))
+                                print(("Bad import line: '%s'" % proto_line))
                                 exit()
 
                             import_from_package = import_from_package_re.group(2).replace("/", ".")
