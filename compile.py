@@ -7,6 +7,7 @@ import sys
 import os
 import shutil
 from subprocess import call
+from helpers import compile_helper
 
 
 def to_lower_case(string):
@@ -479,3 +480,5 @@ if not args.keep_proto_files:
         for file_name in file_names:
             if file_name.endswith(".proto"):
                 os.unlink(os.path.join(folder_path, file_name))
+
+compile_helper.finish_compile(out_path, args.language)
