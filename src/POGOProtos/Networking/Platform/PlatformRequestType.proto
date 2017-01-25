@@ -8,5 +8,5 @@ enum PlatformRequestType {
 	BUY_ITEM_IOS = 4;
 	GET_STORE_ITEMS = 5;
 	SEND_ENCRYPTED_SIGNATURE = 6;
-	UNKNOWN_PRT_8 = 8;
+	PLAT_EIGHT = 8;
 }
