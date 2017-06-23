@@ -1917,15 +1917,18 @@ message FormProto {
 		UNOWN_QUESTION_MARK = 28;
 	}
 }
+
 message ClientGenderProto {
 	float male_percent = 1;
 	float female_percent = 2;
 	float genderless_percent = 3;
 }
+
 message ClientGenderSettingsProto {
 	HoloPokemonId pokemon = 1;
 	ClientGenderProto gender = 2;
 }
+
 message GameMasterClientTemplateProto {
 	string template_id = 1;
 	PokemonSettingsProto pokemon = 2;
@@ -2750,13 +2753,6 @@ message NicknamePokemonOutProto {
 		ERROR_POKEMON_NOT_FOUND = 3;
 		ERROR_POKEMON_IS_EGG = 4;
 	}
-}
-
-message DebugDeletePlayerProto {
-}
-
-message DebugDeletePlayerOutProto {
-	bool success = 1;
 }
 
 message ClaimCodenameRequestProto {
